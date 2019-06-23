@@ -23,10 +23,9 @@ def convert(user_input):
           li = group(commas,user_input)
           to_words =''
           ref2 = {1:"",2:"libo ",3:"milyon ",4:"bilyon "}
-          if (not('0') in user_input):
-                    for i in range(commas):
-                            x = commas-i
-                            to_words+=(place(li[i],x))+ref2[x]
+          for i in range(commas):
+                    x = commas-i
+                    to_words+=(place(li[i],x))+ref2[x]
           return(to_words)
 def place(group,i):
           ref = {'1':'isa','2':'dalawa','3':'tatlo','4':'apat','5':'lima','6':'anim','7':'pito','8':'walo','9':'siyam'}
